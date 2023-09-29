@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Sistema Solar</title>
+</head>
+<body>
+<div id="universo">
+    <div id="sol"></div>
+    <div id="mercurio" class="planeta"><p>Mercurio</p></div>
+    <div id="venus" class="planeta"><p>Venus</p></div>
+    <div id="tierra" class="planeta">
+        <p>Tierra</p>
+        <div id="luna" class="satelite"></div>
+    </div>
+    <div id="marte" class="planeta"><p>Marte</p></div>
+    <div id="jupiter" class="planeta"><p>Júpiter</p></div>
+    <div id="saturno" class="planeta"><p>Saturno</p></div>
+    <div id="urano" class="planeta"><p>Urano</p></div>
+    <div id="neptuno" class="planeta"><p>Neptuno</p></div>
+</div>
+<div id="contador">Vueltas al Sol de la Tierra: <span id="vueltas">0</span></div>
+<script src="estrellas.js"></script>
+<script>
+    // Código para contar las vueltas al sol de la Tierra
+    const contadorVueltas = document.getElementById('vueltas');
+    let contador = 0;
+    
+    // Usa setTimeout para incrementar el contador cada 10 segundos
+    setInterval(() => {
+        contador++;
+        contadorVueltas.innerText = contador;
+    }, 10000); // 10000 milisegundos es igual a 10 segundos
+</script>
+
+
+</body>
+</html>
